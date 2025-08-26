@@ -10,6 +10,13 @@
   <body>
     <header class="header">
       <h1>Global Development Dashboard</h1>
+      <div class="user-info">
+        <span>Welcome, {{ user.username }}</span>
+        <form action="{% url 'logout' %}" method="post" style="margin: 0;">
+          {% csrf_token %}
+          <button type="submit" class="logout-btn">Logout</button>
+        </form>
+      </div>
     </header>
 
     <main class="dashboard">
