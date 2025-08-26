@@ -2,7 +2,7 @@
 
 A full-stack web application that visualizes economic and demographic data from the World Bank. The project features a secure Django backend serving a REST API to an interactive, dynamic JavaScript frontend.
 
-**Live URL:** [https://your-project-name.onrender.com](https://your-project-name.onrender.com) ---
+**Live URL:** [Link](deepq-dashboard-task.onrender.com)
 ## Features
 
 * **User Authentication:** Secure user registration, login, and logout functionality.
@@ -28,8 +28,8 @@ To run this project locally, follow these steps:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/1av22/django-dashboard-project.git
+    cd django-dashboard-project
     ```
 
 2.  **Create and Activate a Virtual Environment:**
@@ -49,7 +49,7 @@ To run this project locally, follow these steps:
     ```
 
 5.  **Load the World Bank Data:**
-    *(Note: The required `final_data.csv` file should be placed in a `/data/` directory in the project root).*
+    *(Note: The required `final_data.csv` file should be placed in a `/data/` directory in the project root, in this case I have already loaded the data in the `/data/` directory).*
     ```bash
     python manage.py seed_data
     ```
