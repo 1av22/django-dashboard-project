@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <style>
+      .signup-container {
+        max-width: 400px;
+        margin: 100px auto;
+      }
+      .signup-container form ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      .signup-container form li {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: #666;
+      }
+      .signup-container button {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #36a2eb;
+        color: white;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-container filter-container">
+      <h2>Sign Up</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Sign Up</button>
+      </form>
+      <p style="text-align: center; margin-top: 20px;">
+        Already have an account? <a href="{% url 'login' %}">Log In</a>
+      </p>
+    </div>
+  </body>
+</html>

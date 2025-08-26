@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Global Development Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Global Development Dashboard</h1>
+    </header>
+
+    <main class="dashboard">
+      <section class="dashboard-row">
+        <div id="gdp-chart-container" class="chart-container">
+          <h2 id="gdp-chart-title"></h2>
+          <div class="chart-wrapper">
+            <canvas id="gdpChart"></canvas>
+          </div>
+        </div>
+        <div id="gdp-filter-container" class="filter-container">
+          <h3>GDP Analysis</h3>
+          <div class="filters">
+            <label for="gdp-year-filter">Select Year:</label>
+            <select id="gdp-year-filter"></select>
+          </div>
+          <div class="filters">
+            <label for="gdp-country-filter">Select Country:</label>
+            <select id="gdp-country-filter"></select>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-row">
+        <div id="pop-filter-container" class="filter-container">
+          <h3>Population Trends</h3>
+          <div class="filters">
+            <label for="population-country-filter">Select Country:</label>
+            <select id="population-country-filter"></select>
+          </div>
+        </div>
+        <div id="pop-line-chart-container" class="chart-container">
+          <h2 id="population-trend-title"></h2>
+          <div class="chart-wrapper">
+            <canvas id="populationTrendChart"></canvas>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-row">
+        <div id="pop-bar-chart-container" class="chart-container">
+          <h2 id="population-bar-title"></h2>
+          <div class="chart-wrapper">
+            <canvas id="populationBarChart"></canvas>
+          </div>
+        </div>
+        <div id="pop-bar-filter-container" class="filter-container">
+          <h3>Most Populous Nations</h3>
+          <p>Select a year to see the 10 most populous countries.</p>
+          <div class="filters">
+            <label for="population-year-filter">Select Year:</label>
+            <select id="population-year-filter"></select>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+  </body>
+</html>
