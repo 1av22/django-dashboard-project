@@ -35,7 +35,6 @@ class DataListAPIView(generics.ListAPIView):
             queryset = queryset.filter(country__iexact=country)
 
         if series:
-            # Allows for partial matches in the series name
             queryset = queryset.filter(series__icontains=series)
 
         if start_year:

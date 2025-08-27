@@ -1,4 +1,3 @@
-/* static/css/style.css */
 body { font-family: sans-serif; margin: 0; background-color: #f0f2f5; }
 .header { background-color: #fff; padding: 1rem 2rem; border-bottom: 1px solid #ddd; }
 h1, h2, h3 { color: #333; margin-top: 0; }
@@ -7,22 +6,21 @@ h2 { font-size: 1.1rem; }
 .dashboard { padding: 1.5rem; }
 
 .dashboard-row {
-    display: flex; /* This is the key property for side-by-side layout */
+    display: flex;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
 .chart-container {
-    flex: 2; /* Chart takes 2/3 of the space */
+    flex: 2;
     background-color: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .filter-container {
-    flex: 1; /* Filter takes 1/3 of the space */
+    flex: 1;
     background-color: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
-/* For the rows where the filter should be on the left */
 #pop-filter-container { order: -1; }
 
 

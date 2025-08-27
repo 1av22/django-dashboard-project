@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     async function initialize() {
         fetch('/api/v1/data/')
             .then(response => {
-                if (!response.ok) { // If response is not 200 OK
+                if (!response.ok) {
                     throw new Error('Not authenticated');
                 }
                 return response.json();
@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             })
             .catch(error => {
                 console.error("Authentication error:", error);
-                // If we can't get data, redirect to the login page
                 window.location.href = '/login/';
             });
     }
